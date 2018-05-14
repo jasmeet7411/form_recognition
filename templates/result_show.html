@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+
+<html>
+<link rel='stylesheet' type='text/css' href='{{url_for('static', filename='style.css')}}'>
+
+
+<body bgcolor=#097960>
+
+<h1>Form Recognition System</h1>
+
+
+
+  
+ <h3> Files are:</h3> 
+ 
+ 
+ <a href="/return-file" target="blank"><button>Download File</button></a> <i>{Details are stored in csv format}</i>
+ <br><br>
+ 
+{% for xx in range(len_val) %}
+ <div id="show_box" style="margin:5px; color:#ffffff;border:1px  solid #1f1f1f; width:47%;">
+	{% set txt= txt_line[xx].split(',') %}
+<a href="{{ url_for('static',filename=inm[xx]) }}">	 
+ <img src="{{ url_for('static',filename=inm[xx]) }}" alt="Input image" width=150 height=200 align='left' style="padding-right:8px;"></a>
+    <u>File Name:</u>    {{ inm[xx]}}<br>  <br>  
+	Group Number:<b>	{{ txt[0] }} </b> <br>
+	Student1:	{{ txt[1] }} , {{ txt[2] }} , {{ txt[3] }} <br>
+	Student2: 	{{ txt[4] }} , {{ txt[5] }} , {{ txt[6] }}<br>
+	Student3: 	{{ txt[7] }} , {{ txt[8] }} , {{ txt[9] }}<br>
+	Project Title:	{{ txt[10] }} 
+	
+	
+	<br>
+</div>
+{% endfor %}
+	
+	
+	
+</body>
+</html>

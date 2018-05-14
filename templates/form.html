@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+<html>
+<link rel='stylesheet' type='text/css' href='{{url_for('static', filename='style.css')}}'>
+
+
+<body background="{{ url_for('static',filename='bg2.jpg') }}">
+<center>
+
+<div id='form_inp' style="width:70%; height:750px; background-color:#097960; padding:8px; border:4px solid #bfbfbf;">
+
+<center>
+<h1 style="font-size:3em;">Form Recognition System</h1>
+
+<br><br><br><br>
+<p style="color:#ffffff; font-size:1.2em;" align="justify">A simple project to predict the handwritten text details written in the 'Minor Project Performa' form. The details are shown on the web page and as well as they are stored in the txt file in a csv format in the folder where the project scripts are stored.</p>
+
+<br><br>
+
+<form action="/val" method='POST' enctype="multipart/form-data">
+Select images: <input type="file" name="img" multiple ><input type="submit" value="Submit">
+</form>
+
+  
+</center>
+  </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,33 @@
+h1
+{
+     color:#ffffff;
+ }
+ 
+
+  
+#show_box
+{
+  margin:10px;
+ color:#ffffff;
+ border:1px solid #1f1f1f;
+ position:relative;
+ width:45%;
+ float:left;
+
+ } 
+
+ 
+
+  
+#show_box img
+{
+   padding-right:10px;
+   
+ }
+ 
+ #show_box:hover
+{
+  background-color:#2f2f2f;
+
+ }
+  
